@@ -5,7 +5,7 @@ def res_cmd(cmd):
 
 def main():
 	cmd = ("nmcli device wifi list")
-	print(res_cmd(cmd))
+	print (res_cmd(cmd))
 
 if __name__ == '__main__':
 	main()
