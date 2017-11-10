@@ -5,7 +5,11 @@ def res_cmd(cmd):
 
 def main():
 	cmd = ("nmcli device wifi list")
-	print (res_cmd(cmd))
-
+	stra = (res_cmd(cmd))
+	lis = stra.splitlines(True)
+	strb = (lis[1].decode("UTF-8"))
+	lis2 = strb.split()
+	print(lis2[1])
+	
 if __name__ == '__main__':
 	main()
