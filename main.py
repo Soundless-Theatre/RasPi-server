@@ -1,5 +1,4 @@
 import subprocess
-from time import sleep
 
 cmd = ("nmcli device wifi list")
 wifinum = 6
@@ -16,8 +15,12 @@ def getcmd():
 	for i in range(wifinum):
 		lis2.append(lis[i])
 		lis3 = lis2[0].decode("UTF-8").split()
-		oplis.append(lis3[0]) 
-		oplis.append(lis3[6])
+		if lis3[0] == "*":
+			oplis.append("*"+lis3[1])
+			oplis.append(lis3[7])
+		else:
+			oplis.append(lis3[0]) 
+			oplis.append(lis3[6])
 		lis3.clear()
 		lis2.clear()
 
