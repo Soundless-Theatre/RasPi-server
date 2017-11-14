@@ -1,7 +1,8 @@
 import subprocess
+import json
+import collections as cl
 
 cmd = ("nmcli device wifi list")
-wifinum = 6
 ssid = []
 power = []
 
