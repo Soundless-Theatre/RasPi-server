@@ -8,12 +8,13 @@ def setcmd(cmd):
 	return subprocess.Popen(cmd,stdout=subprocess.PIPE,shell=True).communicate()[0]
 
 def getcmd():
+	global lis
 	cmddate = (setcmd(cmd))
 	lis = cmddate.splitlines()
 	lis.pop(0)
 	lis2 = []
-	for i in range(wifinum):
-		lis2.append(lis[i])
+	for i in lis:
+		lis2.append(i)
 		lis3 = lis2[0].decode("UTF-8").split()
 		if lis3[0] == "*":
 			oplis.append("*"+lis3[1])
@@ -25,7 +26,7 @@ def getcmd():
 		lis2.clear()
 
 def changelooks():
-	for j in range(wifinum*2):
+	for j in range(len(lis)*2):
 		if oplis[j] == "▂▄▆█":
 			oplis[j] = 4
 		elif oplis[j] == "▂▄▆_":
