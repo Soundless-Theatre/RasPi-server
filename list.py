@@ -3,6 +3,8 @@ import json
 import collections as cl
 
 cmd = ("nmcli device wifi list")
+lis = []
+idlis = []
 ssid = []
 power = []
 
@@ -33,7 +35,10 @@ def getcmd():
 				power.append(1)
 		lis3.clear()
 		lis2.clear()
+	for j in range(len(lis)):
+		idlis.append(j)
 
 getcmd()
+print(idlis)
 print(ssid)
 print(power)
