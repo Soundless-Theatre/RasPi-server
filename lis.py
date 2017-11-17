@@ -45,5 +45,5 @@ class list():
 			json_data["POWER"] = self.power[l]
 			ys[self.idlis[l]] = json_data
 		
-		fw = open('list.json', 'w')
+		fw = open("list.json", "w")
 		json.dump(ys,fw,indent=4)
