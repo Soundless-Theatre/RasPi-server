@@ -1,54 +1,70 @@
 {
     "0": {
-        "SSID": "ST-wifi-24",
+        "SSID": "elecom2g-938781",
         "POWER": 4
     },
     "1": {
-        "SSID": "ST-wifi-5",
-        "POWER": 4
+        "SSID": "aterm-85d559-g",
+        "POWER": 3
     },
     "2": {
-        "SSID": "spc24-GLAN",
-        "POWER": 4
+        "SSID": "aterm-85d559-gw",
+        "POWER": 3
     },
     "3": {
-        "SSID": "*spc24-cisco2",
-        "POWER": 4
+        "SSID": "*elecom5g-938781",
+        "POWER": 3
     },
     "4": {
-        "SSID": "SPC5-GLAN",
+        "SSID": "elecom2g-E12864",
         "POWER": 3
     },
     "5": {
-        "SSID": "Hazamaru",
-        "POWER": 2
+        "SSID": "e-timer-E12864",
+        "POWER": 3
     },
     "6": {
-        "SSID": "Hazamaru",
+        "SSID": "106F3F093497-1",
         "POWER": 2
     },
     "7": {
-        "SSID": "MediaLab",
-        "POWER": 1
+        "SSID": "106F3F093497-3",
+        "POWER": 2
     },
     "8": {
-        "SSID": "WARPSTAR-75B29A",
-        "POWER": 1
+        "SSID": "106F3F093497",
+        "POWER": 2
     },
     "9": {
-        "SSID": "WARPSTAR-75B29A-W",
-        "POWER": 1
+        "SSID": "elecom5g-E12864",
+        "POWER": 2
     },
     "10": {
-        "SSID": "BUFFALO-F81468",
-        "POWER": 1
+        "SSID": "WARPSTAR-5B380A",
+        "POWER": 2
     },
     "11": {
-        "SSID": "WARPSTAR-CCA732-W",
+        "SSID": "WARPSTAR-5B380A-W",
         "POWER": 1
     },
     "12": {
-        "SSID": "WARPSTAR-CCA732",
+        "SSID": "--",
+        "POWER": 1
+    },
+    "13": {
+        "SSID": "106F3F87CBC6_G-1",
+        "POWER": 1
+    },
+    "14": {
+        "SSID": "106F3F87CBC6_G",
+        "POWER": 1
+    },
+    "15": {
+        "SSID": "aterm-ad2cf9-gw",
+        "POWER": 1
+    },
+    "16": {
+        "SSID": "30F772ADB492-2G",
         "POWER": 1
     }
 }
