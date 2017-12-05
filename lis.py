@@ -54,5 +54,5 @@ class list():
 			json_data["SSID"] = self.ssid[l]
 			json_data["POWER"] = self.power[l]
 			ys[self.id_list[l]] = json_data
-		fw = open("list.json", "w")
+		fw = open("input.json", "w")
 		json.dump(ys,fw,indent=4)

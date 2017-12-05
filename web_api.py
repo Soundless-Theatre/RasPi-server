@@ -4,7 +4,7 @@ from flask import Flask
 hoge = lis.list()
 hoge.getcmd()
 
-f = open("list.json")
+f = open("input.json")
 data = f.read()
 f.close()
 app = Flask(__name__)

@@ -1,0 +1,54 @@
+{
+    "0": {
+        "SSID": "spc24-GLAN",
+        "POWER": 4
+    },
+    "1": {
+        "SSID": "*spc24-cisco2",
+        "POWER": 3
+    },
+    "2": {
+        "SSID": "SPC5-GLAN",
+        "POWER": 3
+    },
+    "3": {
+        "SSID": "freewifi",
+        "POWER": 2
+    },
+    "4": {
+        "SSID": "--",
+        "POWER": 2
+    },
+    "5": {
+        "SSID": "Hazamaru",
+        "POWER": 2
+    },
+    "6": {
+        "SSID": "Hazamaru",
+        "POWER": 2
+    },
+    "7": {
+        "SSID": "May-W03",
+        "POWER": 2
+    },
+    "8": {
+        "SSID": "tukitan-ap",
+        "POWER": 1
+    },
+    "9": {
+        "SSID": "WARPSTAR-75B29A-W",
+        "POWER": 1
+    },
+    "10": {
+        "SSID": "\u3051\u3082\u306e\u306f\u304a\u597d\u304d\u3067\u3059\u304b",
+        "POWER": 1
+    },
+    "11": {
+        "SSID": "WARPSTAR-75B29A",
+        "POWER": 1
+    },
+    "12": {
+        "SSID": "MediaLab",
+        "POWER": 1
+    }
+}
