@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<html>
+<head>
+<meta charset = "utf8">
+<title>Test</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="javascript">
+	$(".button").on("click", function(e){
+	alert("test");
+	return e.preventDefault();
+	});
+</script>
+</head>
+<body>
+	<form id="send" action="http://localhost:5000/connect" method="post" name="setpass">
+		<p>ID:<input type="text" size="1" maxlength="2" name="ssid"/></p>
+		<p>Password:<input type="password" size="3" maxlength="15" name="password"/></p>
+		<input type="submit" onclick="send(); return false;"/>
+	</form>
+</body>
+</html>
