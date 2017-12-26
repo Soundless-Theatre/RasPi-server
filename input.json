@@ -8,83 +8,67 @@
         "POWER": 3
     },
     "2": {
-        "SSID": "WARPSTAR-5B380A",
+        "SSID": "elecom2g-E12864",
         "POWER": 3
     },
     "3": {
-        "SSID": "aterm-85d559-g",
-        "POWER": 2
+        "SSID": "e-timer-E12864",
+        "POWER": 3
     },
     "4": {
         "SSID": "aterm-85d559-gw",
         "POWER": 2
     },
     "5": {
-        "SSID": "elecom2g-E12864",
-        "POWER": 2
-    },
-    "6": {
-        "SSID": "e-timer-E12864",
-        "POWER": 2
-    },
-    "7": {
         "SSID": "aterm-5d713f-g",
         "POWER": 2
     },
+    "6": {
+        "SSID": "aterm-85d559-g",
+        "POWER": 2
+    },
+    "7": {
+        "SSID": "106F3F093497",
+        "POWER": 2
+    },
     "8": {
-        "SSID": "WARPSTAR-5B380A-W",
+        "SSID": "WARPSTAR-5B380A",
         "POWER": 2
     },
     "9": {
-        "SSID": "aterm-5d713f-gw",
-        "POWER": 2
-    },
-    "10": {
-        "SSID": "106F3F87CBC6_A-1",
-        "POWER": 2
-    },
-    "11": {
-        "SSID": "elecom5g-E12864",
-        "POWER": 2
-    },
-    "12": {
         "SSID": "106F3F093497-3",
         "POWER": 2
     },
+    "10": {
+        "SSID": "106F3F093497-1",
+        "POWER": 2
+    },
+    "11": {
+        "SSID": "WARPSTAR-5B380A-W",
+        "POWER": 2
+    },
+    "12": {
+        "SSID": "aterm-5d713f-gw",
+        "POWER": 2
+    },
     "13": {
-        "SSID": "aterm-ad2cf9-g",
+        "SSID": "elecom5g-E12864",
         "POWER": 2
     },
     "14": {
-        "SSID": "106F3F093497-1",
+        "SSID": "Buffalo-G-D3A8",
         "POWER": 1
     },
     "15": {
-        "SSID": "B0C7456BADF5-3",
+        "SSID": "30F772ADB492-2G",
         "POWER": 1
     },
     "16": {
-        "SSID": "106F3F093497",
-        "POWER": 1
-    },
-    "17": {
-        "SSID": "A4CAA0AC3946-2G",
-        "POWER": 1
-    },
-    "18": {
-        "SSID": "aterm-bdfeca-g",
-        "POWER": 1
-    },
-    "19": {
-        "SSID": "Buffalo-G-9782",
-        "POWER": 1
-    },
-    "20": {
         "SSID": "aterm-ad2cf9-gw",
         "POWER": 1
     },
-    "21": {
-        "SSID": "logitecgameuser",
+    "17": {
+        "SSID": "aterm-ad2cf9-g",
         "POWER": 1
     }
 }

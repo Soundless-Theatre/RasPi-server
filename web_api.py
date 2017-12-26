@@ -14,11 +14,9 @@ app = Flask(__name__)
 def index():
 	return data
 @app.route("/connect", methods=["POST"])
-def connect_wifi():
-	SSID = request.form["ssid"]
-	PASSWORD = request.form["password"]
-	cmd = ("nmcli device wifi connect " + SSID + " password " + PASSWORD)
-	print(cmd)
-	return None
+def get_user_info():
+    username =  request.form['username'];
+    age = request.form['age'];
+    return username+age
 
 app.run()
