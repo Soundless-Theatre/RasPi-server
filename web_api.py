@@ -3,17 +3,19 @@ import subprocess
 import json
 from flask import Flask, request
 import connect
-build = lis.list()
-build.getcmd()
 
-f = open("/home/kitsuda/Documents/RasPi-server/input.json")
+f = open("./input.json")
 data = f.read()
 f.close()
 app = Flask(__name__)
 
 @app.route("/list")
 def index():
-	return data
+        lis.list.getcmd()
+        f = open("./input.json")
+        data = f.read()
+        f.close()
+        return data
 @app.route("/connect", methods=["POST"])
 def try_connct():
     connect.con(request.form['id'],request.form['pass'])
