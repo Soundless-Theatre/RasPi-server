@@ -19,6 +19,7 @@ def index():
 @app.route("/connect", methods=["POST"])
 def try_connct():
     connect.con(request.form['id'],request.form['pass'])
-    return username+age
+    print(request.form["id"])
+    return "ok"
 
 app.run()
