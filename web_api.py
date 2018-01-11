@@ -2,6 +2,7 @@ import lis
 import subprocess
 import json
 from flask import Flask, request
+import connect
 build = lis.list()
 build.getcmd()
 
@@ -14,9 +15,8 @@ app = Flask(__name__)
 def index():
 	return data
 @app.route("/connect", methods=["POST"])
-def get_user_info():
-    username =  request.form['username'];
-    age = request.form['age'];
+def try_connct():
+    connect.con(request.form['id'],request.form['pass'])
     return username+age
 
 app.run()
