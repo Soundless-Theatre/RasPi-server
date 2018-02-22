@@ -15,21 +15,26 @@ msg=None
 def recaudio(q):
     msg = readaudio.read()
     q.put(msg)
+    print(msg)
 def send():
     global msg,s,ADDRESS,PORT
     s.sendto(msg,(ADDRESS,PORT))
-print("hogehgeo")
 q=Queue()
 p=Process(target=recaudio,args=(q,))
+p.start()
+print(0)
 msg=q.get()
 p.join()
-print("hgoe")
+print(1)
 def main():
-    global msg
+    print("2")
     while True:
+        print(3)
         q=Queue()
         p1=Process(target=recaudio,args=(q,))
         p2=Process(target=send)
+        p1.start()
+        p2.start()
         msg=q.get()
         p1.join()
         p2.join()
