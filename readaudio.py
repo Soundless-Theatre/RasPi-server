@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import pyaudio
 
-CHUNK=128
+CHUNK=1024
 RATE=16000
 p=pyaudio.PyAudio()
 
