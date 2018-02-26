@@ -1,6 +1,8 @@
+#coding : utf-8
+
+import pyaudio
 from socket import socket,AF_INET,SOCK_DGRAM,SOL_SOCKET,SO_BROADCAST
 import sys 
-import readaudio
 from multiprocessing import Process,Queue
 
 HOST = ""
@@ -10,10 +12,19 @@ s = socket(AF_INET,SOCK_DGRAM)
 s.setsockopt(SOL_SOCKET,SO_BROADCAST,1)
 s.bind((HOST,PORT))
 
-msg=None
+CHUNK = 1024
+RATE = 16000
+p = pyaudio.PyAudio()
+stream = p.open(format = pyaudio.paInt16,
+                channels = 2,
+                rate = RATE,
+                frame_per_buffer = CHUNK,
+                input = True,
+                output = False)
 
+msg=None
 def recaudio(q):
-    msg = readaudio.read()
+    msg = stream.read(CHUNK)
     q.put(msg)
 def send(msg):
     global s,ADDRESS,PORT
