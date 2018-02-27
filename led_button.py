@@ -1,7 +1,5 @@
 import wiringpi
 import time
-import PRi.GPIO as GPIO
-import os
 import subprocess
 
 g_led_pin=9
