@@ -1,0 +1,74 @@
+{
+    "0": {
+        "SSID": "elecom2g-938781",
+        "POWER": 4
+    },
+    "1": {
+        "SSID": "*elecom5g-938781",
+        "POWER": 3
+    },
+    "2": {
+        "SSID": "elecom2g-E12864",
+        "POWER": 3
+    },
+    "3": {
+        "SSID": "e-timer-E12864",
+        "POWER": 3
+    },
+    "4": {
+        "SSID": "aterm-85d559-gw",
+        "POWER": 2
+    },
+    "5": {
+        "SSID": "aterm-5d713f-g",
+        "POWER": 2
+    },
+    "6": {
+        "SSID": "aterm-85d559-g",
+        "POWER": 2
+    },
+    "7": {
+        "SSID": "106F3F093497",
+        "POWER": 2
+    },
+    "8": {
+        "SSID": "WARPSTAR-5B380A",
+        "POWER": 2
+    },
+    "9": {
+        "SSID": "106F3F093497-3",
+        "POWER": 2
+    },
+    "10": {
+        "SSID": "106F3F093497-1",
+        "POWER": 2
+    },
+    "11": {
+        "SSID": "WARPSTAR-5B380A-W",
+        "POWER": 2
+    },
+    "12": {
+        "SSID": "aterm-5d713f-gw",
+        "POWER": 2
+    },
+    "13": {
+        "SSID": "elecom5g-E12864",
+        "POWER": 2
+    },
+    "14": {
+        "SSID": "Buffalo-G-D3A8",
+        "POWER": 1
+    },
+    "15": {
+        "SSID": "30F772ADB492-2G",
+        "POWER": 1
+    },
+    "16": {
+        "SSID": "aterm-ad2cf9-gw",
+        "POWER": 1
+    },
+    "17": {
+        "SSID": "aterm-ad2cf9-g",
+        "POWER": 1
+    }
+}
