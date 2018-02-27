@@ -20,6 +20,7 @@ for i in range(3):
     wiringpi.digitalWrite(g_led_pin,0)
     time.sleep(0.5)
 wiringpi.digitalWrite(r_led_pin,1)
+pr2=subprocess.Popen("python3 ./send.py")
 
 while True:
     if wiringpi.digitalRead(b_pin)==0 :
@@ -35,10 +36,14 @@ while True:
                 f = False
                 break
         if f:
+            pr2.terminate()
             wiringpi.digitalWrite(g_led_pin,1)
-            subprocess.run("python3 ./con/web_api.py")
+            pr1=subprocess.Popen("python3 ./con/web_api.py")
+            pr1.wait()
             wiringpi.digitalWrite(g_led_pin,0)
+            pr2=subprocess.Popen("python3 ./send.py")
     time.sleep(0.1)
+pr2.terminate()
 
 
 
