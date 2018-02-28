@@ -1,10 +1,8 @@
 #coding : utf-8
-
 import pyaudio
 from socket import socket,AF_INET,SOCK_DGRAM,SOL_SOCKET,SO_BROADCAST
 import sys 
-from multiprocessing import Process,Queue
-
+from threading import Thread
 HOST = ""
 PORT = 5008
 ADDRESS = "192.168.255.255"
@@ -22,30 +20,22 @@ stream = p.open(format = pyaudio.paInt16,
                 input = True,
                 output = False)
 
-msg=None
+frames=[]
 def recaudio(q):
-    msg = stream.read(CHUNK)
-    q.put(msg)
-def send(msg):
-    global s,ADDRESS,PORT
-    s.sendto(msg,(ADDRESS,PORT))
-q=Queue()
-p=Process(target=recaudio,args=(q,))
-p.start()
-msg=q.get()
-p.join()
-def main():
-    global msg
     while True:
-        q=Queue()
-        p1=Process(target=recaudio,args=(q,))
-        p2=Process(target=send,args=(msg,))
-        p1.start()
-        p2.start()
-        p2.join()
-        msg=q.get()
-        p1.join()
+        frames.append(stream.read(CHUNK))
+def send():
+    while True:
+        if len(frames)  > 0:
+            s.sendto(frames.pop(),(ADDRESS,PORT))
 if __name__=="__main__":
-    main()
+    p1=Thread(target=recaudio)
+    p2=Thread(target=send)
+    p1.setDaemon(True)
+    p2.setDaemon(True)
+    p1.start()
+    p2.start()
+    p1.join()
+    p2.join()
     s.close()
     sys.exit()
