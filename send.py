@@ -21,7 +21,7 @@ stream = p.open(format = pyaudio.paInt16,
                 output = False)
 
 frames=[]
-def recaudio(q):
+def recaudio():
     while True:
         frames.append(stream.read(CHUNK))
 def send():
