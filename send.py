@@ -3,13 +3,17 @@ import pyaudio
 from socket import socket,AF_INET,SOCK_DGRAM,SOL_SOCKET,SO_BROADCAST
 import sys 
 from threading import Thread
+import time
+
 HOST = ""
 PORT = 5008
+PORT_t=5007
 ADDRESS = "192.168.255.255"
 s = socket(AF_INET,SOCK_DGRAM)
 s.setsockopt(SOL_SOCKET,SO_BROADCAST,1)
 s.bind((HOST,PORT))
-
+f=open("./title.txt")
+title=f.read()
 CHUNK = 1024
 RATE = 16000
 p = pyaudio.PyAudio()
@@ -28,6 +32,11 @@ def send():
     while True:
         if len(frames)  > 0:
             s.sendto(frames.pop(),(ADDRESS,PORT))
+def send_title():
+    global title
+    while True:
+        time.sleep(9)
+        s.sendto(title,(ADDRESS,PORT_t))
 if __name__=="__main__":
     p1=Thread(target=recaudio)
     p2=Thread(target=send)
