@@ -20,5 +20,10 @@ def index():
 def try_connct():
     connect.con(request.form['id'],request.form['pass'])
     return "ok"
+@app.route("/settitle",methods=["POST"])
+def set_title():
+    f=open("../title.txt","w")
+    f.writes(request.form["title"])
+
 
 app.run()
