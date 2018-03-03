@@ -4,22 +4,42 @@
 <head>
 <meta charset = "utf8">
 <title>Test</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script language="javascript">
-$('.button').on('click', function(){
-  $.ajax({
-    url: $(this).parent('form').attr('action'),
-    type: 'post',
-    data: $(this).parent('form').serialize()
-  });
-});
-</script>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-<form class='ajax_submit' method="post" action="http://localhost:5000/connect">
-  <input type="text" name="username">
-  <input type="text" name="age">
-  <button>Submit</button>
-</form>
+    <div id="wifiset">
+        <h3>wifi設定</h3>
+    </div>
+    <div id="settitle">
+        <h4>タイトル設定</h4>
+        <input type=text>
+    </div>
+    <button id="exit">設定終了</button>
+    <script>
+        $(function(){
+            $.ajax({
+                type:"get",
+                url:"http://localhost:5000/list", 
+                dataType:"json",
+            }).done(function(data){
+                var l = Object.keys(data).length;
+                for(let i=0;i<l;i++){
+                    var ssid=data[i].SSID;
+                    var power=data[i].POWER;
+                    $(
+                        "<div class='wifi id='div"+String(i)+"'>"+
+                        power + ssid+
+                        "<button class='wifiset' id='"+String(i)+"'>connect</button>"+
+                        "</div>"
+                    ).appendTo("div#wifiset")
+                }
+            });
+            $(document).on("click",".wifiset",function(){
+                console.log("hoge");
+                var id=$(this).attr("id");
+                var pass=window.prompt("wifiのpasswordを入力してください")
+            });
+        });
+    </script>
 </body>
 </html>
