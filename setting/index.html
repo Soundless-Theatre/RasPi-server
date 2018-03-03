@@ -14,7 +14,7 @@
         <h4>タイトル設定</h4>
         <input type=text>
     </div>
-    <button id="exit">設定終了</button>
+    <button id="settitle">タイトルを設定</button>
     <script>
         $(function(){
             $.ajax({
@@ -44,7 +44,18 @@
                     dataType:"json",
                     data:{"id":String(id),"pass":pass}
                 })
+                alert("wifiに接続します");
             });
+            $("button#settitle").click(function(){
+                var title = $("input").val();
+                $.ajax({
+                    type:"post",
+                    url:"http://localhost:5000/settitle",
+                    dataType:"json",
+                    data:{"title":title}
+                })
+                alert("titleを"+title+"に設定しました");
+            })
         });
     </script>
 </body>
