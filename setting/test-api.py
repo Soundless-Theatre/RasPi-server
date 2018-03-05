@@ -5,7 +5,7 @@ cors=CORS(app)
 f = open("./input.json")
 data = f.read()
 f.close()
-@app.route("/list")
+@app.route("/list",methods=["GET"])
 def index():
     print("list request")
     return data
