@@ -27,14 +27,14 @@
                     var ssid=data[i].SSID;
                     var power=data[i].POWER;
                     $(
-                        "<div class='wifi id='div"+String(i)+"'>"+
+                        "<div class='wifi' id='"+String(i)+"'>"+
                         power + ssid+
-                        "<button class='wifiset' id='"+String(i)+"'>connect</button>"+
+                        "<hr>"+
                         "</div>"
                     ).appendTo("div#wifiset")
                 }
             });
-            $(document).on("click",".wifiset",function(){
+            $(document).on("click",".wifi",function(){
                 console.log("hoge");
                 var id=$(this).attr("id");
                 var pass=window.prompt("wifiのpasswordを入力してください");
@@ -44,7 +44,9 @@
                     dataType:"json",
                     data:{"id":String(id),"pass":pass}
                 })
-                alert("wifiに接続します");
+                if (pass.length !== 0){
+                    alert("wifiに接続します");
+                }
             });
             $("button#settitle").click(function(){
                 var title = $("input").val();
