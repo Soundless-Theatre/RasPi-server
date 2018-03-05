@@ -5,6 +5,25 @@
 <meta charset = "utf8">
 <title>Test</title>
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<style>
+    img{
+        width: 7%;
+　　　　 height: 7%;
+        
+    }
+    div.c1{
+        background-color:#616a6a;
+    }
+    div.c0{
+        background-color: #c5ccd3;
+    }
+    h3{
+        color: aqua
+    }
+    div.wifi{
+        font-size: 20px;
+    }
+</style>
 </head>
 <body>
     <div id="wifiset">
@@ -29,9 +48,11 @@
                     var power=data[i].POWER;
                     $(
                         "<div class='wifi' id='"+String(i)+"'>"+
-                        "<img src='./img/wifi"+power+".png'>" + ssid+
+                        "<div class='c"+String(i%2)+"'>"+
+                        "<img src='./img/wifi"+power+".png' class='wifisimg' >" +
+                        "<center><p class='ssid'>"+ssid+"</p></center>"+
                         "<hr>"+
-                        "</div>"
+                        "</div></div>"
                     ).appendTo("div#wifiset")
                 }
             });
