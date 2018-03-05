@@ -38,14 +38,14 @@
                 console.log("hoge");
                 var id=$(this).attr("id");
                 var pass=window.prompt("wifiのpasswordを入力してください");
-                $.ajax({
-                    type:"post",
-                    url:"http://localhost:5000/connect",
-                    dataType:"json",
-                    data:{"id":String(id),"pass":pass}
-                })
                 if (pass.length !== 0){
                     alert("wifiに接続します");
+                    $.ajax({
+                        type:"post",
+                        url:"http://localhost:5000/connect",
+                        dataType:"json",
+                        data:{"id":String(id),"pass":pass}
+                    })
                 }
             });
             $("button#settitle").click(function(){
