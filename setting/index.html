@@ -17,9 +17,10 @@
     <button id="settitle">タイトルを設定</button>
     <script>
         $(function(){
+            var url="http://192.168.1.78:5000"
             $.ajax({
                 type:"get",
-                url:"http://localhost:5000/list", 
+                url: url+"/list", 
                 dataType:"json",
             }).done(function(data){
                 var l = Object.keys(data).length;
@@ -42,7 +43,7 @@
                     alert("wifiに接続します");
                     $.ajax({
                         type:"post",
-                        url:"http://localhost:5000/connect",
+                        url:url+"/connect",
                         dataType:"json",
                         data:{"id":String(id),"pass":pass}
                     })
@@ -52,7 +53,7 @@
                 var title = $("input").val();
                 $.ajax({
                     type:"post",
-                    url:"http://localhost:5000/settitle",
+                    url: url+"/settitle",
                     dataType:"json",
                     data:{"title":title}
                 })
