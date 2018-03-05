@@ -53,7 +53,21 @@
                     ).appendTo("div#wifiset")
                 }
             });
-            $(document).on("click",".wifi",function(){
+            $(document).on("click",".wifi0",function(){
+                console.log("hoge");
+                var id=$(this).attr("id");
+                var pass=window.prompt("wifiのpasswordを入力してください");
+                if (pass.length !== 0){
+                    alert("wifiに接続します");
+                    $.ajax({
+                        type:"post",
+                        url:url+"/connect",
+                        dataType:"json",
+                        data:{"id":String(id),"pass":pass}
+                    })
+                }
+            });
+            $(document).on("click",".wifi1",function(){
                 console.log("hoge");
                 var id=$(this).attr("id");
                 var pass=window.prompt("wifiのpasswordを入力してください");
