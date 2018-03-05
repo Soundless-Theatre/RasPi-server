@@ -7,21 +7,20 @@
 <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <style>
     img{
-        width: 7%;
-　　　　 height: 7%;
-        
+        width: 40px;
+　　　　 height: 50px;
+        float: left;
     }
-    div.c1{
+    div.wifi1{
         background-color:#616a6a;
+        font-size: 30px;
     }
-    div.c0{
+    div.wifi0{
         background-color: #c5ccd3;
+        font-size: 30px;
     }
     h3{
         color: aqua
-    }
-    div.wifi{
-        font-size: 20px;
     }
 </style>
 </head>
@@ -47,12 +46,10 @@
                     var ssid=data[i].SSID;
                     var power=data[i].POWER;
                     $(
-                        "<div class='wifi' id='"+String(i)+"'>"+
-                        "<div class='c"+String(i%2)+"'>"+
+                        "<div class='wifi"+String(i%2)+"' id='"+String(i)+"'>"+
                         "<img src='./img/wifi"+power+".png' class='wifisimg' >" +
-                        "<center><p class='ssid'>"+ssid+"</p></center>"+
-                        "<hr>"+
-                        "</div></div>"
+                        "<center>"+ssid+"</center>"+
+                        "<hr></div>"
                     ).appendTo("div#wifiset")
                 }
             });
