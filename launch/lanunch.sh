@@ -11,10 +11,11 @@ do
             if [ $mode = "send" ] ;then
                 killall python3 
                 
-                nmcli dev dissconnect wlan0
+                nmcli device dissconnect wlan0
                 create_ap -n wlp3s0 SoundessTheatreSetting hogepiyofuga &
                 
-                python3 /home/pi/workspace/RasPi-server/setting/webapi.py &
+                python3 /home/pi/workspace/RasPi-server/setting/web_api.py &
+
                 python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
                 mode="setting"
             else
