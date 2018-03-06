@@ -1,6 +1,7 @@
 #!/bin/bash
 
 while true
+do
     sleep 0.1
     mode="send"
     if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
@@ -23,4 +24,6 @@ while true
                 
                 python3 /home/pi/workspace/RasPi-server/send.py &
                 python3 /home/pi/workspace/Raspi-server/launch/led_green.py &
-            fi
+        fi
+    fi
+done
