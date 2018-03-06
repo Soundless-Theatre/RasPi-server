@@ -4,7 +4,7 @@ import json
 from flask import Flask, request
 import connect
 
-f = open("./input.json")
+f = open("/home/pi/workspace/RasPi-servr/setting/input.json")
 data = f.read()
 f.close()
 app = Flask(__name__)
