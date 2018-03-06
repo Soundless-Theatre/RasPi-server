@@ -8,7 +8,7 @@ do
         sleep 2
         python3 led_all.py &
         if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
-            if [$mode="send"];then
+            if [$mode = "send"];then
                 killall python3 
                 
                 nmcli dev dissconnect wlan0
