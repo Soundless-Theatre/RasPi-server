@@ -24,6 +24,7 @@ do
                 
                 python3 /home/pi/workspace/RasPi-server/send.py &
                 python3 /home/pi/workspace/Raspi-server/launch/led_green.py &
+            fi
         fi
     fi
 done
