@@ -16,7 +16,7 @@ do
                 
                 python3 /home/pi/workspace/RasPi-server/setting/webapi.py &
                 python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
-                $mode="setting"
+                mode="setting"
             else
                 killall python3
                 
@@ -25,7 +25,7 @@ do
                 
                 python3 /home/pi/workspace/RasPi-server/send.py &
                 python3 /home/pi/workspace/Raspi-server/launch/led_green.py &
-                $mode="send"
+                mode="send"
             fi
         fi
     fi
