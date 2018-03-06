@@ -8,7 +8,7 @@ do
         sleep 2
         python3 /home/pi/workspace/launch/led_all.py &
         if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
-            if [$mode = "send"];then
+            if [ $mode = "send" ] ;then
                 killall python3 
                 
                 nmcli dev dissconnect wlan0
@@ -24,7 +24,7 @@ do
                 nmcli dev connect wlan0 
                 
                 python3 /home/pi/workspace/RasPi-server/send.py &
-                python3 /home/pi/workspace/Raspi-server/launch/led_green.py &
+                python3 /home/pi/workspace/RasPi-server/launch/led_green.py &
                 mode="send"
             fi
         fi
