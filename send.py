@@ -12,7 +12,7 @@ ADDRESS = "192.168.255.255"
 s = socket(AF_INET,SOCK_DGRAM)
 s.setsockopt(SOL_SOCKET,SO_BROADCAST,1)
 s.bind((HOST,PORT))
-f=open("./title.txt")
+f=open("/home/pi/workspace/RasPi-server/title.txt")
 title=f.read()
 CHUNK = 1024
 RATE = 16000
