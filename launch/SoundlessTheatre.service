@@ -1,0 +1,11 @@
+#dir > /etc/systemd/system/SoundlessTheatre.service
+[Unit]
+Description = SoundlessTheatre daemon
+
+[Service]
+ExecStart = /opt/SoundlessTheatre.sh
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
