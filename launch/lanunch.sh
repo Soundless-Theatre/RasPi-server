@@ -12,7 +12,7 @@ do
                 killall python3 
                 
                 nmcli device disconnect wlan0
-                create_ap -n wlp3s0 SoundessTheatreSetting hogepiyofuga &
+                create_ap -n wlan0 SoundessTheatreSetting hogepiyofuga &
                 
                 python3 /home/pi/workspace/RasPi-server/setting/web_api.py &
 
