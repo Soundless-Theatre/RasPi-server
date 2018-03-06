@@ -4,11 +4,12 @@ while true
 do
     sleep 0.1
     mode="send"
+    send="send"
     if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
         sleep 2
         python3 /home/pi/workspace/RasPi-server/launch/led_all.py &
         if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
-            if [ $mode = "send" ] ;then
+            if [ $mode = $send ]; then
                 killall python3 
                 
                 nmcli device disconnect wlan0
