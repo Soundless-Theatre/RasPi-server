@@ -4,7 +4,7 @@ while true
 do
     killall python3
     killall python
-    python3 /home/pi/workspace/test.py
+    bash /home/pi/workspace/RasPi-server/launch/launch.sh
     sleep 1
 done
 
