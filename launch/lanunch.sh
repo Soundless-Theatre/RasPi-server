@@ -13,9 +13,9 @@ do
                 
                 nmcli device disconnect wlan0
                 create_ap -n --no-virt wlan0 SoundessTheatreSetting hogepiyofuga &
-                sleep 5
+                sleep 10
                 cd /home/pi/workspace/RasPi-server/setting
-                python3 -m http.server &
+                python3 -m http.server 80 &
                 cd /home/pi/workspace/RasPi-server/launch
                 python3 /home/pi/workspace/RasPi-server/setting/web_api.py &
 
