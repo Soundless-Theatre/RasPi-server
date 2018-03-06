@@ -10,11 +10,11 @@ while true
             if [$mode="send"];then
                 killall python3 
                 #wifiacsesspointsetting
-                python3 ../setting/webapi.py &
-                python3 ./led_red.py & 
+                python3 /home/pi/workspace/RasPi-server/setting/webapi.py &
+                python3 /home/pi/workspace/RasPi-server/launch/led_red.py & 
             else
                 killall python3
                 #wifiakuessupoint off
-                python3 ../send.py &
-                python3 ./led_green.py &
+                python3 /home/pi/workspace/RasPi-server/send.py &
+                python3 /home/pi/workspace/Raspi-server/launch/led_green.py &
             fi
