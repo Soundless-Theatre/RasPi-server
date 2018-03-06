@@ -6,7 +6,7 @@ do
     mode="send"
     if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
         sleep 2
-        python3 /home/pi/workspace/launch/led_all.py &
+        python3 /home/pi/workspace/RasPi-server/launch/led_all.py &
         if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
             if [ $mode = "send" ] ;then
                 killall python3 
