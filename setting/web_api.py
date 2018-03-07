@@ -11,7 +11,7 @@ l=lis.list()
 @app.route("/list")
 def index():
         l.getcmd()
-        f = open("/home/pi/RasPi-server/setting/input.json")
+        f = open("/home/pi/workspace/RasPi-server/setting/input.json")
         data = f.read()
         f.close()
         return data
