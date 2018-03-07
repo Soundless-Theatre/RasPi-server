@@ -24,8 +24,7 @@ class list():
             self.id_list.append(i)
             #1行ずつ区切ったリストからを更に１文字ずつ区切り、ssidのリストを生成
         for j in lis:
-            line_list.append(j)
-            word_list = line_list[0].decode("UTF-8").split()
+            word_list = j.decode("UTF-8").split()
             if word_list[0] == "*":
                 self.ssid.append("*"+word_list[1])
             else:
@@ -44,16 +43,16 @@ class list():
                     self.power.append(1)
             line_list.clear()
             word_list.clear()
-            #json形式にしてファイルに書き込み
-            ys = cl.OrderedDict()
-            for l in range(len(self.id_list)):
-                json_data = cl.OrderedDict()
-                json_data["SSID"] = self.ssid[l]
-                json_data["POWER"] = self.power[l]
-                ys[self.id_list[l]] = json_data
-            fw = open("/home/pi/workspace/RasPi-server/setting/input.json", "w")
-            json.dump(ys,fw,indent=4)
-            fw.close()
+        #json形式にしてファイルに書き込み
+        ys = cl.OrderedDict()
+        for l in range(len(self.id_list)):
+            json_data = cl.OrderedDict()
+            json_data["SSID"] = self.ssid[l]
+            json_data["POWER"] = self.power[l]
+            ys[self.id_list[l]] = json_data
+        fw = open("/home/pi/workspace/RasPi-server/setting/input.json", "w")
+        json.dump(ys,fw,indent=4)
+        fw.close()
 if __name__=="__main__":
     l=list()
     l.getcmd()
