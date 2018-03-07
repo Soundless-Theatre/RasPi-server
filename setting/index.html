@@ -51,7 +51,7 @@
                     var ssid=data[i].SSID;
                     var power=data[i].POWER;
                     $(
-                        "<div class='wifi"+String(i%2)+"' id='"+String(i)+"'>"+
+                        "<div class='wifi"+String(i%2)+"' id='"+ssid+"'>"+
                         "<img src='./img/wifi"+power+".png' class='wifisimg' >" +
                         "<center>"+ssid+"</center>"+
                         "<hr></div>"
@@ -60,7 +60,7 @@
             });
             $(document).on("click",".wifi0",function(){
                 console.log("hoge");
-                var id=$(this).attr("id");
+                var ssid=$(this).attr("id");
                 var pass=window.prompt("wifiのpasswordを入力してください");
                 if (pass.length !== 0){
                     alert("wifiに接続します");
@@ -68,7 +68,7 @@
                         type:"post",
                         url:url+"/connect",
                         dataType:"json",
-                        data:{"id":String(id),"pass":pass}
+                        data:{"ssid":ssid,"pass":pass}
                     })
                 }
             });
