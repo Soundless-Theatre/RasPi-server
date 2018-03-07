@@ -7,6 +7,7 @@ killall create_ap
 nmcli dev connect wlan0
 python3 /home/pi/workspace/RasPi-server/launch/led_green.py &
 python3 /home/pi/workspace/RasPi-server/send.py &
+python3 /home/pi/workspace/RasPi-server/sendtitle.py &
 
 mode="send"
 send="send"
@@ -45,7 +46,8 @@ do
                 killall python3 &
                 killall python3 
                 python3 /home/pi/workspace/RasPi-server/launch/led_green.py &
-                python3 /home/pi/workspace/RasPi-server/send.py &
+                python3 /home/pi/workspace/RasPi-server/send.py & 
+                python3 /home/pi/workspace/RasPi-server/sendtitle.py &
                 
                 mode="send"
             fi
