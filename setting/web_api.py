@@ -21,7 +21,7 @@ def try_connct():
     return "ok"
 @app.route("/settitle",methods=["POST"])
 def set_title():
-    f=open("../title.txt","w")
+    f=open("/home/pi/workspace/RasPi-server/title.txt","w")
     f.writes(request.form["title"])
 
 
