@@ -56,6 +56,10 @@ class list():
 			ys[self.id_list[l]] = json_data
 		fw = open("/home/pi/workspace/RasPi-server/setting/input.json", "w")
 		json.dump(ys,fw,indent=4)
+<<<<<<< HEAD
 if __name__=="__main__":
     l=list()
     list.getcmd()
+=======
+    fw.close()
+>>>>>>> develop_wifi_setting
