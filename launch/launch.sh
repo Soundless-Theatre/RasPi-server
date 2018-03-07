@@ -5,7 +5,7 @@ echo "process start,start,starstart,start,startstart,start,startstart,start,star
 killall python3
 killall create_ap
 nmcli dev connect wlan0
-python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
+python3 /home/pi/workspace/RasPi-server/launch/led_green.py &
 python3 /home/pi/workspace/RasPi-server/send.py &
 
 mode="send"
@@ -21,10 +21,10 @@ do
             echo "butonn pushed button pushed button pushed button pushed button pushed"
             if [ $mode = $send ]; then
                 echo "setting mode start setting mode start setting mode start setting mode start"
+                killall python3 &
+                killall python3 &
                 killall python3
-                killall python3
-                killall python3
-                
+                python3 /home/pi/workspace/RasPi-server/setting/lis.py
                 nmcli device disconnect wlan0
                 create_ap -n --no-virt wlan0 SoundessTheatreSetting hogepiyofuga &
                 sleep 10
@@ -36,14 +36,16 @@ do
                 python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
                 mode="set"
             else
+                nmcli dev connect wlan0
+                python3 /home/pi/workspace/RasPi-server/setting/connect.py
                 echo "send mode start send mode start send mode start send mode start"
                 killall python3 
                 killall create_ap
-
-                nmcli device connect wlan0 
-                
-                python3 /home/pi/workspace/RasPi-server/send.py &
+                killall python3 &
+                killall python3 
                 python3 /home/pi/workspace/RasPi-server/launch/led_green.py &
+                python3 /home/pi/workspace/RasPi-server/send.py &
+                
                 mode="send"
             fi
         fi

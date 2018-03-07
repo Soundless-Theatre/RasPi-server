@@ -1,7 +1,7 @@
 import json
 import subprocess
 def con(wifi_num,password):
-    wifi_file=open("./input.json","r")
+    wifi_file=open("/home/pi/workspace/RasPi-server/setting/input.json","r")
     wifi_json = json.load(wifi_file)
     ssid = wifi_json[str(wifi_num)]["SSID"]
     subprocess.call("nmcli dev wifi connect "+ssid+"password "+password,shell=True)

@@ -54,5 +54,8 @@ class list():
 			json_data["SSID"] = self.ssid[l]
 			json_data["POWER"] = self.power[l]
 			ys[self.id_list[l]] = json_data
-		fw = open("/home/kitsuda/Documents/RasPi-server/input.json", "w")
+		fw = open("/home/pi/workspace/RasPi-server/setting/input.json", "w")
 		json.dump(ys,fw,indent=4)
+if __name__=="__main__":
+    l=list()
+    list.getcmd()
