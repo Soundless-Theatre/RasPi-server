@@ -1,18 +1,16 @@
 #!/bin/bash
 
+killall python3
+killall create_ap
+nmcli dev connect wlan0
+python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
+python3 /home/pi/workspace/RasPi-server/send.py &
+
 while true
 do
     sleep 0.1
     mode="send"
     send="send"
-    killall python3
-    killall create_ap
-    nmcli dev connect wlan0
-    python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
-    python3 /home/pi/workspace/RasPi-server/send.py &
-
-    
-    
     
     if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
         sleep 2
