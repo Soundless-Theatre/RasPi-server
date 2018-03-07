@@ -11,6 +11,7 @@ def index():
     return data
 @app.route("/connect", methods=["POST"])
 def try_connct():
+    print(request.data)
     print("connect request",request.form['id'],request.form['pass'])
     return "ok"
 @app.route("/settitle",methods=["POST"])
