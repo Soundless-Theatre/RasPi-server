@@ -13,7 +13,9 @@ def index():
         return data
 @app.route("/connect", methods=["POST"])
 def try_connct():
-    connect.con(request.form['id'],request.form['pass'])
+    f=open("home/pi/workspace/RasPi-server/setting/pass.txt","w")
+    f.write(request.form['ssid']+" "+request.form['pass'])
+    f.close()
     return "ok"
 @app.route("/settitle",methods=["POST"])
 def set_title():
