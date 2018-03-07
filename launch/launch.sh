@@ -9,7 +9,7 @@ python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
 python3 /home/pi/workspace/RasPi-server/send.py &
 
 mode="send"
-end="send"
+send="send"
 
 while true
 do
