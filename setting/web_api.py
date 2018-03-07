@@ -1,4 +1,3 @@
-import lis
 from flask import Flask, request
 import connect
 from flask.ext.cors import  CORS
@@ -6,11 +5,8 @@ from flask.ext.cors import  CORS
 app = Flask(__name__)
 cors=CORS(app)
 
-l=lis.list()
-
 @app.route("/list")
 def index():
-        l.getcmd()
         f = open("/home/pi/workspace/RasPi-server/setting/input.json")
         data = f.read()
         f.close()
