@@ -5,29 +5,9 @@
 <meta charset = "utf8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
 <link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="index.css">
 <title>Soundless-Theatresetting</title>
 <script src="jquery-3.3.1.min.js"></script>
-<style>
-    img{
-        width: 40px;
-　　　　 height: 50px;
-        float: left;
-    }
-    div.wifi1{
-        background-color:#616a6a;
-        font-size: 30px;
-    }
-    div.wifi0{
-        background-color: #c5ccd3;
-        font-size: 30px;
-    }
-    h2{
-        color:#253d48
-    }
-    body{
-        background-color: #c8e3e5
-    }
-</style>
 </head>
 <body>
     <div id="wifiset">
@@ -59,7 +39,6 @@
                 }
             });
             $(document).on("click",".wifi0",function(){
-                console.log("hoge");
                 var ssid=$(this).attr("id");
                 var pass=window.prompt("wifiのpasswordを入力してください");
                 if (pass.length !== 0){
@@ -73,8 +52,7 @@
                 }
             });
             $(document).on("click",".wifi1",function(){
-                console.log("hoge");
-                var id=$(this).attr("id");
+                var ssid=$(this).attr("id");
                 var pass=window.prompt("wifiのpasswordを入力してください");
                 if (pass.length !== 0){
                     alert("wifiに接続します");
@@ -82,7 +60,7 @@
                         type:"post",
                         url:url+"/connect",
                         dataType:"json",
-                        data:{"id":String(id),"pass":pass}
+                        data:{"id":ssid,"pass":pass}
                     })
                 }
             });
