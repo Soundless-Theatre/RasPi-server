@@ -5,7 +5,7 @@ echo "process start,start,starstart,start,startstart,start,startstart,start,star
 killall python3
 killall create_ap
 nmcli dev connect wlan0
-python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
+python3 /home/pi/workspace/RasPi-server/launch/led_green.py &
 python3 /home/pi/workspace/RasPi-server/send.py &
 
 mode="send"
@@ -39,11 +39,12 @@ do
                 echo "send mode start send mode start send mode start send mode start"
                 killall python3 
                 killall create_ap
-
-                nmcli device connect wlan0 
-                
-                python3 /home/pi/workspace/RasPi-server/send.py &
+                killall python3 &
+                killall python3 
+                nmcli dev connect wlan0
                 python3 /home/pi/workspace/RasPi-server/launch/led_green.py &
+                python3 /home/pi/workspace/RasPi-server/send.py &
+                
                 mode="send"
             fi
         fi
