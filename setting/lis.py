@@ -56,3 +56,4 @@ class list():
 			ys[self.id_list[l]] = json_data
 		fw = open("/home/kitsuda/Documents/RasPi-server/input.json", "w")
 		json.dump(ys,fw,indent=4)
+    fw.close()
