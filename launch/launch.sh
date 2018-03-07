@@ -6,18 +6,20 @@ nmcli dev connect wlan0
 python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
 python3 /home/pi/workspace/RasPi-server/send.py &
 
+mode="send"
+end="send"
+
 while true
 do
     sleep 0.1
-    mode="send"
-    send="send"
-    
     if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
         sleep 2
         python3 /home/pi/workspace/RasPi-server/launch/led_all.py &
         if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
             if [ $mode = $send ]; then
-                killall python3 
+                killall python3
+                killall python3
+                killall python3
                 
                 nmcli device disconnect wlan0
                 create_ap -n --no-virt wlan0 SoundessTheatreSetting hogepiyofuga &
@@ -28,7 +30,7 @@ do
                 python3 /home/pi/workspace/RasPi-server/setting/web_api.py &
 
                 python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
-                mode="setting"
+                mode="set"
             else
                 killall python3
                 
