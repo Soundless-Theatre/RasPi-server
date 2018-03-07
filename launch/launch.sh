@@ -32,7 +32,7 @@ do
                 python3 -m http.server 80 &
                 cd /home/pi/workspace/RasPi-server/launch
                 python3 /home/pi/workspace/RasPi-server/setting/web_api.py &
-
+                sleep 1
                 python3 /home/pi/workspace/RasPi-server/launch/led_red.py &
                 mode="set"
             else
