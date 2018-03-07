@@ -11,8 +11,7 @@ wiringpi.pinMode(g_led_pin,1)
 wiringpi.digitalWrite(r_led_pin,0)
 wiringpi.digitalWrite(g_led_pin,0)
 
-
-for i in range(3):
+while True:
     wiringpi.digitalWrite(g_led_pin,1)
     time.sleep(1)
     wiringpi.digitalWrite(g_led_pin,0)
