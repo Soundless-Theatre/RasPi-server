@@ -15,7 +15,7 @@ def try_connct():
     print("connect request",request.form['ssid'],request.form['pass'])
     return "ok"
 @app.route("/connect_app", methods=["POST"])
-def try_connct():
+def try_connct_app():
     app_data = request.data
     str_data = app_data.decode()
     p = open("./pass.txt", "w")
