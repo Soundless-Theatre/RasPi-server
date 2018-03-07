@@ -1,18 +1,17 @@
 import lis
-import subprocess
-import json
 from flask import Flask, request
 import connect
+from flask.ext.cors import  CORS
 
-f = open("/home/pi/workspace/RasPi-server/setting/input.json")
-data = f.read()
-f.close()
 app = Flask(__name__)
+cors=CORS(app)
+
+l=lis.list()
 
 @app.route("/list")
 def index():
-        lis.list.getcmd()
-        f = open("./input.json")
+        l.getcmd()
+        f = open("/home/pi/RasPi-server/setting/input.json")
         data = f.read()
         f.close()
         return data
@@ -26,4 +25,4 @@ def set_title():
     f.writes(request.form["title"])
 
 
-app.run()
+app.run(host="0.0.0.0")
