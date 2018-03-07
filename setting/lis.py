@@ -56,4 +56,4 @@ class list():
             fw.close()
 if __name__=="__main__":
     l=list()
-    list.getcmd()
+    l.getcmd()
