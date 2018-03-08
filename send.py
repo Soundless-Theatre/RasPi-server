@@ -6,7 +6,7 @@ from threading import Thread
 
 HOST = ""
 PORT = 5008
-ADDRESS = "192.168.255.255"
+ADDRESS = "192.168.1.255"
 s = socket(AF_INET,SOCK_DGRAM)
 s.setsockopt(SOL_SOCKET,SO_BROADCAST,1)
 s.bind((HOST,PORT))
