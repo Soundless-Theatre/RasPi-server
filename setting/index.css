@@ -1,19 +1,29 @@
 .wifisimg{
-        width: 40px;
-　　　　 height: 50px;
-        float: left;
+    width: 40px;
+　　height: 50px;
+    float: left;
 }
-.wifi1{
-    background-color:#616a6a;
-    font-size: 30px;
+.wifi{
+    background-color:#757575;
+    font-size: 20px;
+    /*opacity: 0.75;*/
 }
-.wifi0{
-    background-color: #c5ccd3;
-    font-size: 30px;
+#ssid{
+    color:#18FFFF;
+    margin:0 auto;
 }
-h2{
-    color:#253d48
+h1{
+    text-align: center;
+    color:#18FFFF
+}
+.title{
+    text-align: right;
+    color:#18FFFF
 }
 body{
-   background-color: #c8e3e5
+    background-color: #424242;
 }
+html{
+    height: 120%;
+}
+

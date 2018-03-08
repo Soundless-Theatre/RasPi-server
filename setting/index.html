@@ -11,13 +11,13 @@
 </head>
 <body>
     <div id="wifiset">
-        <h2>wifi設定</h2>
+        <h1>wifi設定</h2>
     </div>
-    <div id="settitle">
+    <div class="title">
         <h2>タイトル設定</h2>
-        <input type=text>
+        <input type="text">
+        <button id="settitle">決定</button>
     </div>
-    <button id="settitle">タイトルを設定</button>
     <script>
         $(function(){
             var url="http://192.168.12.1:5000"
@@ -31,9 +31,9 @@
                     var ssid=data[i].SSID;
                     var power=data[i].POWER;
                     $(
-                        "<div class='wifi"+String(i%2)+"' id='"+ssid+"'>"+
+                        "<div class='wifi' id='"+ssid+"'>"+
                         "<img src='./img/wifi"+power+".png' class='wifisimg' >" +
-                        "<center>"+ssid+"</center>"+
+                        "<p id='ssid'>"+ssid+"</p>"+
                         "<hr></div>"
                     ).appendTo("div#wifiset")
                 }
@@ -51,20 +51,8 @@
                     })
                 }
             });
-            $(document).on("click",".wifi1",function(){
-                var ssid=$(this).attr("id");
-                var pass=window.prompt("wifiのpasswordを入力してください");
-                if (pass.length !== 0){
-                    alert("wifiに接続します");
-                    $.ajax({
-                        type:"post",
-                        url:url+"/connect",
-                        dataType:"json",
-                        data:{"id":ssid,"pass":pass}
-                    })
-                }
-            });
             $("button#settitle").click(function(){
+            $("#settitle").click(function(){
                 var title = $("input").val();
                 $.ajax({
                     type:"post",
@@ -77,4 +65,5 @@
         });
     </script>
 </body>
+<p></p>
 </html>
