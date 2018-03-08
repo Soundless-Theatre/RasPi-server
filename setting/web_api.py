@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask.ext.cors import  CORS
 app = Flask(__name__)
 cors=CORS(app)
-f = open("/home/pi/RasPi-server/settong/input.json")
+f = open("/home/pi/RasPi-server/setting/input.json")
 data = f.read()
 f.close()
 str_data = ""
