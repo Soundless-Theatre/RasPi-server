@@ -3,13 +3,14 @@
 　　height: 50px;
     float: left;
 }
-.wifi1{
-    background-color:#616a6a;
-    font-size: 30px;
+.wifi{
+    background-color:#757575;
+    font-size: 20px;
+    /*opacity: 0.75;*/
 }
-.wifi0{
-    background-color: #c5ccd3;
-    font-size: 30px;
+#ssid{
+    color:#18FFFF;
+    margin:0 auto;
 }
 h1{
     text-align: center;
@@ -20,14 +21,9 @@ h1{
     color:#18FFFF
 }
 body{
-   /*background-color: #c8e3e5*/
-    background-image: url(./img/haikei_pc02.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height:100%;
-    background-attachment: fixed;
+    background-color: #424242;
 }
 html{
-    height: 100%;
+    height: 120%;
 }
+

@@ -31,27 +31,14 @@
                     var ssid=data[i].SSID;
                     var power=data[i].POWER;
                     $(
-                        "<div class='wifi"+String(i%2)+"' id='"+String(i)+"'>"+
+                        "<div class='wifi'>"+
                         "<img src='./img/wifi"+power+".png' class='wifisimg' >" +
-                        "<center>"+ssid+"</center>"+
+                        "<p id='ssid'>"+ssid+"</p>"+
                         "<hr></div>"
                     ).appendTo("div#wifiset")
                 }
             });
-            $(document).on("click",".wifi0",function(){
-                var id=$(this).attr("id");
-                var pass=window.prompt("wifiのpasswordを入力してください");
-                if (pass.length !== 0){
-                    alert("wifiに接続します");
-                    $.ajax({
-                        type:"post",
-                        url:url+"/connect",
-                        dataType:"json",
-                        data:{"id":String(id),"pass":pass}
-                    })
-                }
-            });
-            $(document).on("click",".wifi1",function(){
+            $(document).on("click",".wifi",function(){
                 var id=$(this).attr("id");
                 var pass=window.prompt("wifiのpasswordを入力してください");
                 if (pass.length !== 0){
@@ -77,5 +64,5 @@
         });
     </script>
 </body>
-<p style="margin:60ptx;"><p>
+<p></p>
 </html>
