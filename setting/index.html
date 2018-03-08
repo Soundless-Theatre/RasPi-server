@@ -20,7 +20,7 @@
     </div>
     <script>
         $(function(){
-            var url="http://192.168.1.37:5000"
+            var url="http://192.168.0.5:5000"
             $.ajax({
                 type:"get",
                 url: url+"/list", 
@@ -39,7 +39,7 @@
                 }
             });
             $(document).on("click",".wifi",function(){
-                var id=$(this).attr("id");
+                var ssid=$(this).text();
                 var pass=window.prompt("wifiのpasswordを入力してください");
                 if (pass.length !== 0){
                     alert("wifiに接続します");
@@ -47,7 +47,8 @@
                         type:"post",
                         url:url+"/connect",
                         dataType:"json",
-                        data:{"id":String(id),"pass":pass}
+                        contentType:"application/json;",
+                        data: JSON.stringify({"ssid":String(ssid),"pass":pass})
                     })
                 }
             });

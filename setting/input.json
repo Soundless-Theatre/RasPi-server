@@ -1,74 +1,62 @@
 {
     "0": {
-        "SSID": "elecom2g-938781",
-        "POWER": 4
+        "SSID": "WARPSTAR-5B380A-W",
+        "POWER": 3
     },
     "1": {
-        "SSID": "*elecom5g-938781",
+        "SSID": "*WARPSTAR-5B380A",
         "POWER": 3
     },
     "2": {
-        "SSID": "elecom2g-E12864",
-        "POWER": 3
+        "SSID": "ap-pc-b23b9e",
+        "POWER": 2
     },
     "3": {
-        "SSID": "e-timer-E12864",
-        "POWER": 3
+        "SSID": "ap-game-b23b9f",
+        "POWER": 2
     },
     "4": {
-        "SSID": "aterm-85d559-gw",
+        "SSID": "Buffalo-G-D3A8",
         "POWER": 2
     },
     "5": {
-        "SSID": "aterm-5d713f-g",
+        "SSID": "elecom2g-938781",
         "POWER": 2
     },
     "6": {
-        "SSID": "aterm-85d559-g",
+        "SSID": "elecom5g-938781",
         "POWER": 2
     },
     "7": {
-        "SSID": "106F3F093497",
+        "SSID": "Buffalo-A-D3A8",
         "POWER": 2
     },
     "8": {
-        "SSID": "WARPSTAR-5B380A",
+        "SSID": "elecom2g-E12864",
         "POWER": 2
     },
     "9": {
-        "SSID": "106F3F093497-3",
-        "POWER": 2
+        "SSID": "AirPort20913",
+        "POWER": 1
     },
     "10": {
-        "SSID": "106F3F093497-1",
-        "POWER": 2
+        "SSID": "elecom2g-E12864",
+        "POWER": 1
     },
     "11": {
-        "SSID": "WARPSTAR-5B380A-W",
-        "POWER": 2
+        "SSID": "106F3F093497-3",
+        "POWER": 1
     },
     "12": {
-        "SSID": "aterm-5d713f-gw",
-        "POWER": 2
+        "SSID": "106F3F093497-1",
+        "POWER": 1
     },
     "13": {
-        "SSID": "elecom5g-E12864",
-        "POWER": 2
+        "SSID": "106F3F093497",
+        "POWER": 1
     },
     "14": {
-        "SSID": "Buffalo-G-D3A8",
-        "POWER": 1
-    },
-    "15": {
-        "SSID": "30F772ADB492-2G",
-        "POWER": 1
-    },
-    "16": {
-        "SSID": "aterm-ad2cf9-gw",
-        "POWER": 1
-    },
-    "17": {
-        "SSID": "aterm-ad2cf9-g",
+        "SSID": "auhome_acyY3J-W",
         "POWER": 1
     }
 }
