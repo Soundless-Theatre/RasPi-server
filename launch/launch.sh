@@ -19,6 +19,7 @@ do
         sleep 2
         python3 /home/pi/workspace/RasPi-server/launch/led_all.py &
         if $(python3 /home/pi/workspace/RasPi-server/launch/check.py);then
+            sleep 1.5
             echo "butonn pushed button pushed button pushed button pushed button pushed"
             if [ $mode = $send ]; then
                 echo "setting mode start setting mode start setting mode start setting mode start"
