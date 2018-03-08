@@ -11,16 +11,16 @@
 </head>
 <body>
     <div id="wifiset">
-        <h2>wifi設定</h2>
+        <h1>wifi設定</h2>
     </div>
-    <div id="settitle">
+    <div class="title">
         <h2>タイトル設定</h2>
-        <input type=text>
+        <input type="text">
+        <button id="settitle">決定</button>
     </div>
-    <button id="settitle">タイトルを設定</button>
     <script>
         $(function(){
-            var url="http://192.168.12.1:5000"
+            var url="http://192.168.1.37:5000"
             $.ajax({
                 type:"get",
                 url: url+"/list", 
@@ -64,7 +64,7 @@
                     })
                 }
             });
-            $("button#settitle").click(function(){
+            $("#settitle").click(function(){
                 var title = $("input").val();
                 $.ajax({
                     type:"post",
@@ -77,4 +77,5 @@
         });
     </script>
 </body>
+<p style="margin:60ptx;"><p>
 </html>
