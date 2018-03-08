@@ -38,7 +38,7 @@
                     ).appendTo("div#wifiset")
                 }
             });
-            $(document).on("click",".wifi0",function(){
+            $(document).on("click",".wifi",function(){
                 var ssid=$(this).attr("id");
                 var pass=window.prompt("wifiのpasswordを入力してください");
                 if (pass.length !== 0){
