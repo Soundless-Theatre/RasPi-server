@@ -2,7 +2,7 @@
 from socket import socket,AF_INET,SOCK_DGRAM,SOL_SOCKET,SO_BROADCAST
 import time
 HOST = ""
-PORT=5007
+PORT=5009
 ADDRESS = "192.168.255.255"
 s = socket(AF_INET,SOCK_DGRAM)
 s.setsockopt(SOL_SOCKET,SO_BROADCAST,1)
