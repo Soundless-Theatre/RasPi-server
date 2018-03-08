@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask.ext.cors import  CORS
 app = Flask(__name__)
 cors=CORS(app)
-f = open("/home/pi/RasPi-server/setting/input.json")
+f = open("/home/pi/workspace/RasPi-server/setting/input.json")
 data = f.read()
 f.close()
 str_data = ""
@@ -26,13 +26,13 @@ def try_conncet_app():
 
 @app.route("/settitle",methods=["POST"])
 def set_title():
-    f=open("/home/pi/RasPi-server/setting/title.txt","w")
+    f=open("/home/pi/workspace/RasPi-server/setting/title.txt","w")
     f.write(request.form["title"])
     f.close()
     return "ok"
 
 def writepass(st):
-    p = open("/home/pi/RasPi-server/setting/pass.txt", "w")
+    p = open("/home/pi/workspace/RasPi-server/setting/pass.txt", "w")
     p.write(st)
     p.close()
 
